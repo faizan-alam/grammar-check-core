@@ -15,6 +15,7 @@ Navigate to the backend directory and install dependencies:
 - PORT=your_port_number
 - JWT_SECRET=your_jwt_secret
 - API_URL=your_api_url
+- OPENAI_API_KEY=your_open_ai_api_key
 
 3️⃣ Run the Server:
 
@@ -27,8 +28,8 @@ Navigate to the backend directory and install dependencies:
 - npx http-server
 
 ## 🔐 Authentication Details
-- Email: 
-- Password: 
+- **Email:** `testing@testing.com`
+- **Password:** `12345678`
 
 ## 🚦 API Routes
 - | Route | Description | Access |
