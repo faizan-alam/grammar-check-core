@@ -42,4 +42,4 @@ Navigate to the backend directory and install dependencies:
 ## 🎥 Demo
 🔹 Deployed Link: https://open-ai-frontend-sooty.vercel.app/login.html
 
-🔹 Click the thumbnail or [watch the demo here](https://streamable.com/6aozyd).
+🔹 Click the thumbnail or [watch the demo here](https://streamable.com/f0gd7z).
