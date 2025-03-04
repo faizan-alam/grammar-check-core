@@ -2,21 +2,23 @@ document.getElementById("analyzeButton").addEventListener("click", async functio
     const inputText = document.getElementById("inputText").value;
     const correctedDiv = document.getElementById("correctedText");
     const incorrectDiv = document.getElementById("incorrectText");
+    const analyzeButton = document.getElementById("analyzeButton");
     const correctedCard = document.getElementById("correctedCard");
     const incorrectCard = document.getElementById("incorrectCard");
     const resultsContainer = document.getElementById("results");
 
     if (!inputText.trim()) {
-        resultDiv.innerHTML = "Please enter some text.";
+        inputText.innerHTML = "Please enter some text.";
         return;
     }
 
     correctedDiv.innerHTML = "Checking grammar...";
     incorrectDiv.innerHTML = "Checking grammar...";
     resultsContainer.style.display = "block";
+    showLoader(analyzeButton);
 
     try {
-        const response = await fetch("https://grammar-check-mocha.vercel.app/api/check-grammar", {
+        const response = await fetch("https://open-ai-grammer-checker-core.vercel.app/api/check-grammar", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text: inputText })
@@ -39,6 +41,8 @@ document.getElementById("analyzeButton").addEventListener("click", async functio
         console.error("Error:", error);
         correctedDiv.innerHTML = "An error occurred. Please try again.";
         incorrectDiv.innerHTML = "An error occurred. Please try again.";
+    }finally{
+        hideLoader(analyzeButton, "Check Grammar");
     }
 });
 

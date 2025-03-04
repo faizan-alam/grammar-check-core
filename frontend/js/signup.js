@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showLoader(signupBtn);
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/register", {
+      const response = await fetch("https://open-ai-grammer-checker-core.vercel.app/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -41,11 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
       const result = await response.json();
 
       if (response.ok) {
-        localStorage.setItem("user", JSON.stringify(result.user));
         showToast("Registered Successful");
 
         setTimeout(() => {
-          window.location.href = "/login.html";
+          window.location.href = "/login";
         }, 1000);
       } else {
         showToast(result.message || "Email already in use.", false);

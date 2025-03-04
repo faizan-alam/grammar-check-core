@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     showLoader(loginBtn);
 
     try {
-      const response = await fetch("http://localhost:5000/api/auth/login", {
+      const response = await fetch("https://open-ai-grammer-checker-core.vercel.app/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         showToast("Login Successful");
 
         setTimeout(() => {
-          window.location.href = "/index.html";
+          window.location.href = "/";
         }, 1000);
       } else {
         showToast(result.message || "Invalid email or password.", false);

@@ -2,35 +2,43 @@
 
 ## 🔧 Getting Started
 
-1️⃣ Install:
+1️⃣ Install Dependencies:
 
-- cd both project
-- npm install on both
+Navigate to the backend directory and install dependencies:
+- cd backend
+- npm install
 
 
-2️⃣ Create `.env.local` in backend:
+2️⃣ Create .env.local in the Backend:
 
 - DATABASE_URL=your_mongodb_connection_string
 - PORT=your_port_number
 - JWT_SECRET=your_jwt_secret
-- OPEN_AI_URL=your_open_ai_url
-- OPENAI_API_KEY=your_open_ai_api_key
+- API_URL=your_api_url
 
 3️⃣ Run the Server:
-- npm start in backend
-- npx http-server in frontend
+
+### Backend:
+- cd backend
+- npm start
+
+### Frontend:
+- cd frontend
+- npx http-server
 
 ## 🔐 Authentication Details
-- **Email:** `testing@testing.com`
-- **Password:** `12345678`
+- Email: 
+- Password: 
 
-## 🚦 Routes
+## 🚦 API Routes
 - | Route | Description | Access |
 - |------------|--------------------------|--------|
-- | `/signup` | User Signup Page | Public |
-- | `/login` | User Login Page | Public |
-- | `/grammar` | Grammar Checker (Private) | Protected |
+- | /auth/register | User Signup Page | Public |
+- | /auth/login | User Login Page | Public |
+- | /check-grammar | Grammar Checker (Private) | Protected |
 
 
+## 🎥 Demo
+🔹 Deployed Link: https://open-ai-frontend-sooty.vercel.app/login.html
 
-🔹 Click the thumbnail or [watch the demo here](https://streamable.com/rc3kna).
+🔹 Click the thumbnail or [watch the demo here](https://streamable.com/6aozyd).
